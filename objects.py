@@ -8,6 +8,14 @@ from GameManager.funcs import resize_surface
 from GameExtensions.UI import TextLabel
 
 
+# Petite commentaire sur sing.ROOT
+#
+#  Dans main.py, on a créé une instance de GameRoot qui va nous s'occuper des objets, détection des collisions, l'affichage sur l'écran et qui nous offre des
+# fonctions utiles. On veut qu'une instance de GameRoot maximum car on ne veut pas plusieurs jeux différents en même temps. Ce genre de classes sont appelées 
+# singleton et quand une instance de GameRoot est créée, ce dernier enregistre une référence à cette instance dans la variable ROOT dans le module singleton.
+# Comme ça, on est sûr qu'on va accéder à la même instance et on peut partager la référence à l'instance dans le projet entier en important GameManager.singleton.
+
+
 # La classe qui définit le cyclone
 class Cyclone(GameObject):
     def __init__(self):
